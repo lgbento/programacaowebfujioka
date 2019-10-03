@@ -53,8 +53,12 @@ public class ProductResource {
     }
     
     @GetMapping("/product/name/{name}")
-    public Product getProductListByname(@PathVariable String name){
+    public List<Product> getProductListByname(@PathVariable String name){
     	return productService.acharProductByName(name);
+    }
+    @GetMapping("/product/substring/{string}")
+    public List<Product> getProductBySubstring(@PathVariable String string){
+    	return productService.acharProductBySubstring(string);
     }
 
 }

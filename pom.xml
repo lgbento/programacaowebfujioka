@@ -13,6 +13,7 @@
     <groupId>dev.fujioka.java.avancado</groupId>
     <artifactId>web</artifactId>
     <version>0.0.3.SNAPSHOT</version>
+    <packaging>war</packaging>
 
     <name>web</name>
     <description>Projeto da disciplina de programação avançada para web</description>

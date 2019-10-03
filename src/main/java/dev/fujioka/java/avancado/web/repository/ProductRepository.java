@@ -17,5 +17,8 @@ public interface ProductRepository
 	public Product buscarPorId(Long id);
 
 	@Query("SELECT p FROM Product p WHERE p.name = :name")
-	public Product buscarProdutoPorNome(String name);
+	public List<Product> buscarProdutoPorNome(String name);
+	
+	@Query("SELECT p FROM Product p Where p.name like %:string%")
+	public List<Product> buscarProdutoPorSubstring(String string);
 }

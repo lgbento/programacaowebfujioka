@@ -50,7 +50,11 @@ public class ProductService
     public Product buscarProdutoPorID(Long id){
     	return productRepository.buscarPorId(id);
     }
-    public Product acharProductByName(String name){
+    public List<Product> acharProductByName(String name){
     	return productRepository.buscarProdutoPorNome(name);
     }
+    public List<Product> acharProductBySubstring(String string){
+    	return productRepository.buscarProdutoPorSubstring(string);
+    }
+    
    }
