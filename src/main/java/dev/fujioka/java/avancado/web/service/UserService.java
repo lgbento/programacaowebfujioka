@@ -5,6 +5,7 @@ import dev.fujioka.java.avancado.web.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,5 +43,28 @@ public class UserService implements CrudInterface<User> {
     @Override
     public long count() {
         return userRepository.count();
+    }
+    
+    public List<User> acharUserByFirstName(String firstName){
+    	return userRepository.buscarUsuarioPorPrimeiroNome(firstName);
+    }
+    
+    public List<User> acharUserBySubstringFirstName(String string){
+    	return userRepository.buscarUsuarioPorSubstringPrimeiroNome(string);
+    }
+    public List<User> acharUserByLastName(String lastName){
+    	return userRepository.buscarUsuarioPorSobreNome(lastName);
+    }
+    
+    public List<User> acharUserBySubstringLastName(String string){
+    	return userRepository.buscarUsuarioPorSubstringSobreNome(string);
+    }
+    
+    public List<User> acharUserByPassword(String password){
+    	return userRepository.buscarUsuarioPorSenha(password);
+    }
+    
+    public List<User> acharUserByDateCreation(Date date){
+    	return userRepository.findBydtCreation(date);
     }
 }
