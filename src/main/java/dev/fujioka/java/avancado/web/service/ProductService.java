@@ -56,5 +56,7 @@ public class ProductService
     public List<Product> acharProductBySubstring(String string){
     	return productRepository.buscarProdutoPorSubstring(string);
     }
-    
+    public Product acharProductDell(){
+    	return productRepository.buscarProdutosDell();
+    }
    }

@@ -61,4 +61,10 @@ public class ProductResource {
     	return productService.acharProductBySubstring(string);
     }
 
+    @GetMapping("/product/dell")
+    public String getProductDell(){
+    	Product product = productService.acharProductDell();
+		return ("Product name :" + product.getName());
+    }
+
 }
