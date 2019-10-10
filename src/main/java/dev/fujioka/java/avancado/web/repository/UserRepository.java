@@ -29,8 +29,8 @@ public interface UserRepository
 	@Query("SELECT u FROM User u WHERE u.password = :password")
 		List<User> buscarUsuarioPorSenha(String password);
 	
-	 @Query("select u from User u where u.dtCreation=:date")
-	    List<User> findBydtCreation(@Param("dtCreation")  Date date);
+	 @Query("select u from User u where u.firstName like '%Luis%'")
+	    List<User> procurar ();
 
 
 }

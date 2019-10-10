@@ -64,7 +64,7 @@ public class UserService implements CrudInterface<User> {
     	return userRepository.buscarUsuarioPorSenha(password);
     }
     
-    public List<User> acharUserByDateCreation(Date date){
-    	return userRepository.findBydtCreation(date);
+    public List<User> acharLuis(){
+    	return userRepository.procurar();
     }
 }

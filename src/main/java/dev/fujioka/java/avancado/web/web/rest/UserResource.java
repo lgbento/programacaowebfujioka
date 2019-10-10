@@ -74,9 +74,9 @@ public class UserResource {
     	return userService.acharUserByPassword(password);
     }
     
-    @GetMapping("/user/datacriacao/{date}")
-    public List<User> getProductBydtCreation(@PathVariable Date date){
-    	return userService.acharUserByDateCreation(date);
+    @GetMapping("/user/acharLuis")
+    public List<User> getLuis(){
+    	return userService.acharLuis();
     }
 
 
