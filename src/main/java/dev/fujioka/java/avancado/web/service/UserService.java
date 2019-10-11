@@ -5,9 +5,11 @@ import dev.fujioka.java.avancado.web.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 @Service
 public class UserService implements CrudInterface<User> {
@@ -67,4 +69,5 @@ public class UserService implements CrudInterface<User> {
     public List<User> acharLuis(){
     	return userRepository.procurar();
     }
+	
 }

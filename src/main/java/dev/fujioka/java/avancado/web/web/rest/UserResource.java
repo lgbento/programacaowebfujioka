@@ -79,5 +79,4 @@ public class UserResource {
     	return userService.acharLuis();
     }
 
-
 }

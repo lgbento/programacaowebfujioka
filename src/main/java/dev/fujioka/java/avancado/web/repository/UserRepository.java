@@ -31,6 +31,5 @@ public interface UserRepository
 	
 	 @Query("select u from User u where u.firstName like '%Luis%'")
 	    List<User> procurar ();
-
-	 
+ 
 }
